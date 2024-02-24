@@ -6,11 +6,11 @@ import 'package:flutter_application_test2/main.dart';
 
 class ListElemnt extends StatefulWidget {
   final Item _item;
-  final VoidCallback _onPressed;
+  final VoidCallback _showChanges;
 
-  ListElemnt({Key? key, required Item item, required VoidCallback onPressed})
+  ListElemnt({Key? key, required Item item, required VoidCallback showChanges})
       : this._item = item,
-        _onPressed = onPressed,
+        _showChanges = showChanges,
         super(key: key);
 
   @override
@@ -32,9 +32,16 @@ class _ListElemnt extends State<ListElemnt> {
     dateText = daysAgo == 0 ? 'today' : "${daysAgo}" + "days ago";
     ;
     //apply list changes to list view
-    widget._onPressed();
+    widget._showChanges();
     //Save new datas of items
     MyHomePage.saveData();
+  }
+
+  //delete button select event to delete current item
+  void _delet() {
+    MyHomePage.items.remove(widget._item);
+    MyHomePage.saveData();
+    widget._showChanges();
   }
 
   @override
@@ -75,6 +82,11 @@ class _ListElemnt extends State<ListElemnt> {
                     style: TextStyle(fontSize: 18.0, color: MyTheme.text),
                   ),
                 ),
+                IconButton(
+                  onPressed: _delet,
+                  icon: const Icon(Icons.delete),
+                  color: MyTheme.text,
+                )
               ],
             ),
           ),

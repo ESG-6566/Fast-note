@@ -151,7 +151,7 @@ class _MyHomePageState extends State<MyHomePage> {
         itemBuilder: (context, index) {
           return ListElemnt(
             item: MyHomePage.items[index],
-            onPressed: showListChanges,
+            showChanges: showListChanges,
           );
         },
       ),
