@@ -11,9 +11,6 @@ import 'package:flutter_application_test2/UserData.dart';
 import 'package:path_provider/path_provider.dart';
 
 void main() {
-  //load all items saved in application support folder
-  MyHomePage.loadData();
-
   onStart();
 
   runApp(const MyApp());
@@ -36,6 +33,15 @@ Future<void> onStart() async {
     };
     String json = jsonEncode(data);
     File('${supportDirectory.path}/UserData.json').writeAsStringSync(json);
+  }
+
+  //check for items data file exist
+  file = File('${supportDirectory.path}/Items.json');
+  if (file.existsSync()) {
+    //load all items saved in application support folder
+    MyHomePage.loadData();
+  } else {
+    file.createSync();
   }
 }
 
@@ -150,7 +156,7 @@ class _MyHomePageState extends State<MyHomePage> {
         },
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (() => AddItemWindow.openScreen(context,showListChanges)),
+        onPressed: (() => AddItemWindow.openScreen(context, showListChanges)),
         tooltip: 'Add items',
         child: const Icon(Icons.add),
         backgroundColor: MyTheme.colorB,
