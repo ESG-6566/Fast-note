@@ -1,5 +1,5 @@
-import 'package:flutter_application_test2/MyCalculate.dart';
-import 'package:flutter_application_test2/main.dart';
+import 'package:Fast_note/MyCalculate.dart';
+import 'package:Fast_note/main.dart';
 
 class Item {
   late String name;

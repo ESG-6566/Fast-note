@@ -2,12 +2,12 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_test2/AddItem.dart';
-import 'package:flutter_application_test2/Item.dart';
-import 'package:flutter_application_test2/ListElemnt.dart';
-import 'package:flutter_application_test2/MyCalculate.dart';
-import 'package:flutter_application_test2/MyTheme.dart';
-import 'package:flutter_application_test2/UserData.dart';
+import 'package:Fast_note/AddItem.dart';
+import 'package:Fast_note/Item.dart';
+import 'package:Fast_note/ListElemnt.dart';
+import 'package:Fast_note/MyCalculate.dart';
+import 'package:Fast_note/MyTheme.dart';
+import 'package:Fast_note/UserData.dart';
 import 'package:path_provider/path_provider.dart';
 
 void main() {
@@ -161,7 +161,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: const Icon(Icons.add),
         backgroundColor: MyTheme.colorB,
         foregroundColor: MyTheme.buttonText,
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
     );
   }
 }

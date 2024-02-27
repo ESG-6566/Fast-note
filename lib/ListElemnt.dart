@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_test2/Item.dart';
-import 'package:flutter_application_test2/MyCalculate.dart';
-import 'package:flutter_application_test2/MyTheme.dart';
-import 'package:flutter_application_test2/main.dart';
+import 'package:Fast_note/Item.dart';
+import 'package:Fast_note/MyCalculate.dart';
+import 'package:Fast_note/MyTheme.dart';
+import 'package:Fast_note/main.dart';
 
 class ListElemnt extends StatefulWidget {
   final Item _item;

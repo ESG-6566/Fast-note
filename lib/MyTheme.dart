@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_test2/UserData.dart';
+import 'package:Fast_note/UserData.dart';
 
 class MyTheme {
   static Color light = Color(0xFFFBFBFF);
@@ -12,7 +12,8 @@ class MyTheme {
   static Color background = Color(0xFFFBFBFF);
   static Color noColor = Colors.transparent;
   static Color highlight = Color(0xFFffbf69);
-  static Color buttonText = Color.fromARGB(255, 255, 255, 255);
+  static Color buttonText = Color(0xFFFFFFFF);
+  static Color warning = Color(0xFFd90429);
 
   static void Switch(MyThemeMode themeMode) {
     switch (themeMode) {
@@ -22,11 +23,12 @@ class MyTheme {
         highDark = Color(0xFF001829);
         colorA = Color(0xFF00253D);
         colorB = Color(0xFF00497A);
-        text = Color.fromARGB(255, 220, 220, 220);
-        lowtText = Color.fromARGB(255, 130, 130, 130);
+        text = Color(0xFFDCDCDC);
+        lowtText = Color(0xFF828282);
         background = Color(0xFF000C14);
         highlight = Color(0xFF0096c7);
-        buttonText = Color.fromARGB(255, 220, 220, 220);
+        buttonText = Color(0xFFDCDCDC);
+        warning = Color(0xFFfca311);
 
         UserData.currentTheme = MyThemeMode.dark;
         UserData.saveData();
@@ -40,9 +42,9 @@ class MyTheme {
         text = Color(0xFF000000);
         lowtText = Color(0xFF787878);
         background = Color(0xFFFBFBFF);
-        UserData.currentTheme = MyThemeMode.defaultMode;
         highlight = Color(0xFFffbf69);
-        buttonText = Color.fromARGB(255, 255, 255, 255);
+        buttonText = Color(0xFFFFFFFF);
+        warning = Color(0xFFd90429);
 
         UserData.currentTheme = MyThemeMode.defaultMode;
         UserData.saveData();
