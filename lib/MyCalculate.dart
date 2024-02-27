@@ -1,4 +1,4 @@
-import 'package:flutter_application_test2/MyTheme.dart';
+import 'package:Fast_note/MyTheme.dart';
 
 class MyCalculate {
   /// Calculate date without time

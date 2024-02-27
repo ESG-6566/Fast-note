@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:flutter_application_test2/MyTheme.dart';
+import 'package:Fast_note/MyTheme.dart';
 import 'package:path_provider/path_provider.dart';
 
 ///this class is for managing user main datas
