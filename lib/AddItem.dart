@@ -91,6 +91,7 @@ class _AddItemWindow extends State<AddItemWindow> {
             ),
             width: 500,
             margin: const EdgeInsets.symmetric(horizontal: 16.0),
+
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: TextField(

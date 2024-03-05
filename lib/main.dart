@@ -13,6 +13,7 @@ import 'package:path_provider/path_provider.dart';
 void main() {
   // Initialize Flutter before accessing services
   WidgetsFlutterBinding.ensureInitialized();
+
   onStart();
 
   runApp(const MyApp());
