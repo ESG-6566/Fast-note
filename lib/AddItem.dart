@@ -90,7 +90,8 @@ class _AddItemWindow extends State<AddItemWindow> {
               borderRadius: BorderRadius.circular(10),
             ),
             width: 500,
-            //margin: const EdgeInsets.all(16.0),
+            margin: const EdgeInsets.symmetric(horizontal: 16.0),
+
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: TextField(
