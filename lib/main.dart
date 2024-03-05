@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:Fast_note/LoadingSceen.dart';
 import 'package:flutter/material.dart';
 import 'package:Fast_note/AddItem.dart';
 import 'package:Fast_note/Item.dart';
@@ -62,7 +63,8 @@ class MyApp extends StatelessWidget {
             TextSelectionThemeData(selectionColor: MyTheme.colorB),
         scaffoldBackgroundColor: MyTheme.background,
       ),
-      home: const MyHomePage(title: 'Fast note'),
+      //Show loading screen befor MyHomePage
+      home: const LoadingScreen(nextScreen: MyHomePage(title: "Fast note")),
     );
   }
 }
