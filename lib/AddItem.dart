@@ -40,6 +40,8 @@ class _AddItemWindow extends State<AddItemWindow> {
           error = true;
         });
         break;
+      } else {
+        error = false;
       }
     }
     if (!error) {
@@ -91,7 +93,6 @@ class _AddItemWindow extends State<AddItemWindow> {
             ),
             width: 500,
             margin: const EdgeInsets.symmetric(horizontal: 16.0),
-
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: TextField(
@@ -123,7 +124,7 @@ class _AddItemWindow extends State<AddItemWindow> {
         child: Center(
             child: Container(
           width: 500,
-          margin: EdgeInsets.symmetric(vertical: 8.0),
+          margin: const EdgeInsets.all(8.0),
           child: Text(
             'This item has already been added. Try to change the name',
             style: TextStyle(color: MyTheme.warning),

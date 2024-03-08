@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 class LoadingScreen extends StatelessWidget {
   final Widget _nextScreen;
 
-  const LoadingScreen({super.key, required nextScreen}) : _nextScreen = nextScreen;
+  const LoadingScreen({super.key, required nextScreen})
+      : _nextScreen = nextScreen;
 
   // Simulate loading data asynchronously
   Future<void> _loadData() async {
@@ -17,10 +18,15 @@ class LoadingScreen extends StatelessWidget {
     return Scaffold(
       body: FutureBuilder(
         future: _loadData(),
-        builder: (context, snapshot) {
+        builder: (
+          context,
+          snapshot,
+        ) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(
-              child: CircularProgressIndicator(color: MyTheme.colorB,),
+              child: CircularProgressIndicator(
+                color: MyTheme.colorB,
+              ),
             );
           } else if (snapshot.hasError) {
             return Center(

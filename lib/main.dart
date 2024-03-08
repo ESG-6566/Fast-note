@@ -9,6 +9,7 @@ import 'package:Fast_note/ListElemnt.dart';
 import 'package:Fast_note/MyCalculate.dart';
 import 'package:Fast_note/MyTheme.dart';
 import 'package:Fast_note/UserData.dart';
+import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
 
 void main() {
@@ -120,6 +121,9 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       backgroundColor: MyTheme.background,
       appBar: AppBar(
+        systemOverlayStyle: SystemUiOverlayStyle(
+            statusBarColor: MyTheme.background, // Set the status bar color
+            statusBarIconBrightness: MyTheme.brightness),
         centerTitle: true,
         title: Text(
           widget.title,
@@ -147,7 +151,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
       ),
-      //bottomSheet: ElevatedButton(onPressed: (() => {}), child: Text("test")),
       body: ListView.separated(
         itemCount: MyHomePage.items.length,
         separatorBuilder: (BuildContext context, int index) {

@@ -14,6 +14,7 @@ class MyTheme {
   static Color highlight = Color(0xFFffbf69);
   static Color buttonText = Color(0xFFFFFFFF);
   static Color warning = Color(0xFFd90429);
+  static Brightness brightness = Brightness.light;
 
   static void Switch(MyThemeMode themeMode) {
     switch (themeMode) {
@@ -29,6 +30,7 @@ class MyTheme {
         highlight = Color(0xFF0096c7);
         buttonText = Color(0xFFDCDCDC);
         warning = Color(0xFFfca311);
+        brightness = Brightness.light;
 
         UserData.currentTheme = MyThemeMode.dark;
         UserData.saveData();
@@ -45,6 +47,7 @@ class MyTheme {
         highlight = Color(0xFFffbf69);
         buttonText = Color(0xFFFFFFFF);
         warning = Color(0xFFd90429);
+        brightness = Brightness.dark;
 
         UserData.currentTheme = MyThemeMode.defaultMode;
         UserData.saveData();
